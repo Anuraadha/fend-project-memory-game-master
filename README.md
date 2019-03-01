@@ -4,7 +4,7 @@
 
 * [Info](#Info)
 * [How To Play](#HowToPlay)
-[comment]: <>(* [Demo](#Demo))
+[comment]: <> (* [Demo](#Demo))
 * [Specifications](#Specifications)
 
 
