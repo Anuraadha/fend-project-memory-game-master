@@ -33,12 +33,12 @@ Memory game has total 16 card arranged in a grid. There are exactly two cards of
 
 ## Incorrect Match
 
-![Incorrect Match](img/nomatch.jpg)
+![Incorrect Match](img/nomatch.JPG)
 
 
 ## Complete Match
 
-![Modal Display](img/modal.jpg)
+![Modal Display](img/modal.JPG)
 
 
 ## Specifications
