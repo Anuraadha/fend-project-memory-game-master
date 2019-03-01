@@ -4,7 +4,6 @@
 
 * [Info](#Info)
 * [How To Play](#HowToPlay)
-[comment]: <> (* [Demo](#Demo))
 * [Specifications](#Specifications)
 
 
@@ -14,8 +13,6 @@
 Memory Game project is a part of Udacity's FEND(Front End Nanodegree) course to show our knowledge of Javascript, CSS and html. Player has to match all the cards in pairs of two in order to complete the game.
 
 
-
-[comment]: <> (## Demo)
 
 ## How To Play
 Memory game has total 16 card arranged in a grid. There are exactly two cards of the same type which are arranged randomly.
