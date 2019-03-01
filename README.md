@@ -27,7 +27,7 @@ Memory game has total 16 card arranged in a grid. There are exactly two cards of
 
 ## Correct Match
 
-![Correct Match](img/match.jpg)
+![Correct Match](https://github.com/Anuraadha/fend-project-memory-game-master/tree/master/img/match.jpg)
 
 
 
