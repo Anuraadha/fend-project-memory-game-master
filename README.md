@@ -4,7 +4,7 @@
 
 * [Info](#Info)
 * [How To Play](#HowToPlay)
-* [Demo](#Demo)
+[comment]: <>(* [Demo](#Demo))
 * [Specifications](#Specifications)
 
 
@@ -15,7 +15,7 @@ Memory Game project is a part of Udacity's FEND(Front End Nanodegree) course to 
 
 
 
-## Demo
+[comment]: <> (## Demo)
 
 ## How To Play
 Memory game has total 16 card arranged in a grid. There are exactly two cards of the same type which are arranged randomly.
