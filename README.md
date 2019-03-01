@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Info](#Info)
-* [HowToPlay](#How To Play)
+* [How To Play](#HowToPlay)
 * [Demo](#Demo)
 * [Specifications](#Specifications)
 
@@ -20,9 +20,9 @@ Memory Game project is a part of Udacity's FEND(Front End Nanodegree) course to 
 ## How To Play
 Memory game has total 16 card arranged in a grid. There are exactly two cards of the same type which are arranged randomly.
 
-* [Player flips one card to open this card](# )
-* [Then player turn the second card, If both has same symbol then both card will remain open, otherwise both will hide again.](#)
-* [The games ends once all cards are matched.](#)
+* [Player flips one card to open this card]()
+* [Then player turn the second card, If both has same symbol then both card will remain open, otherwise both will hide again.]()
+* [The games ends once all cards are matched.]()
 
 
 ## Correct Match
@@ -43,10 +43,10 @@ Memory game has total 16 card arranged in a grid. There are exactly two cards of
 
 ## Specifications
 
-* [Live count of all moves](#)
+* [Live count of all moves]()
 
-* [Timer will automaticaly start once you start playing this game](#)
+* [Timer will automaticaly start once you start playing this game]()
 
-* [Game has ratings according to the number of moves ](#)
+* [Game has ratings according to the number of moves ]()
 
-* [Game will display the highest score till the current session](#)
+* [Game will display the highest score till the current session]()
