@@ -1,0 +1,270 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family :'Lemon';
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-weight: 300;
+    font-size: 50px;
+    color : #660033;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+    animation-name: flipInY;
+  	-webkit-backface-visibility: visible !important;
+  	backface-visibility: visible !important;
+  	animation-duration: .75s;
+}
+
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    animation-name: pulse;
+  	-webkit-backface-visibility: visible !important;
+  	backface-visibility: visible !important;
+  	animation-duration: .75s;
+}
+
+.deck .card.nomatch {
+  animation-name: wobble;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: 1s;
+    background: #e2033a;
+}
+
+
+.deck .card.disabled {
+	pointer-events: none;
+	opacity: 0.8;
+}
+
+
+.stars .fa-star-show {
+  display: none;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+    display: flex;
+   justify-content: space-between;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+
+#star-rating li{
+  list-style: none;
+  display: inline-block;
+}
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.fa-star , .fa-repeat{
+  color : #660033;
+}
+
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/* for congrats box*/
+.modal {
+
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        border: black;
+
+    }
+.modal-content {
+        background: #ffffff url('../img/geometry2.png');
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem 1.5rem;
+        width: 24rem;
+        border-radius: 0.5rem;
+        text-align: center;
+    }
+.close-button {
+        float: right;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+    }
+.close-button:hover {
+        background-color: darkgray;
+    }
+
+.show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+
+.modal .modal-content  h2{
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color: #660033;
+    }
+.modal .modal-content  p{
+ font-family: "Comic Sans MS", cursive, sans-serif;
+  color: black;
+}
+.modal .modal-content  h4{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 15px;
+}
+#play-again {
+  background-color: #02ccba;
+  text-align: center;
+  border: black;
+  border-radius: 10%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+#play-again a {
+  color: white;
+}
+
+.fa-trophy{
+  font-size: 30px;
+  color : #660033;
+}
+
+
+/******************animation****************************/
+
+/********** TO open card ********************************/
+@keyframes flipInY {
+	from {transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;}
+	40% {transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;}
+	60% {transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;}
+	80% {transform: perspective(400px) rotate3d(0, 1, 0, -5deg);}
+	to {transform: perspective(400px);}
+}
+
+/********** TO Match card ********************************/
+
+@keyframes pulse {
+	from {transform: scale3d(1, 1, 1);}
+	50% {transform: scale3d(1.2, 1.2, 1.2);}
+	to {transform: scale3d(1, 1, 1);}
+}
+
+/********** Whne card does not match ********************************/
+
+@keyframes wobble {
+  0% {transform: translateX(0%);}
+  15% {transform: translateX(-25%) rotate(-5deg);}
+  30% {transform: translateX(20%) rotate(3deg);}
+  45% {transform: translateX(-15%) rotate(-3deg);}
+  60% {transform: translateX(10%) rotate(2deg);}
+  75% {transform: translateX(-5%) rotate(-1deg);}
+  100% {transform: translateX(0%);}
+}

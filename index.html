@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet'>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <!-- Score Panel -->
+
+        <section class="score-panel">
+          <div class="Rating">
+            <ul class="stars">
+          		<li><i class="fa fa-star"></i></li>
+          		<li><i class="fa fa-star"></i></li>
+          		<li><i class="fa fa-star"></i></li>
+          	</ul>
+          </div>
+
+          <!-- Move-->
+          <div class="moveCount">
+            <span class="moves">3</span> Moves
+          </div>
+
+          <!-- Timer-->
+          <div class="timerStart">
+            <span id = "timer">  </span>
+          </div>
+
+            <!-- Restart-->
+            <div class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+          <!-- Deck of cards -->
+        <ul class="deck card-deck"></ul>
+
+        <!--Modal Display-->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Congratulations</h2><i class="fa fa-trophy" aria-hidden="true"></i>
+                    <p> You won the Game </p>
+                    <h4> Moves -  <span id=finalMove>
+                    </span></h4>
+                    <h4> Time -  <span id=totalTime> </span> </h4>
+                    <h4>Rating -   <span id=star-rating></span></h4>
+                    <h4>High Score -  <span id=highscore class=totalTime1></span>  Moves  </h4>
+
+                <button id="play-again">
+                   <a> Play again</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
